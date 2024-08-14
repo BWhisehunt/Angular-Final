@@ -1,0 +1,17 @@
+<div class="product-list">
+  <h2>Product List</h2>
+  <button routerLink="/add" class="btn btn-primary">Add New Product</button>
+  <br>
+  <input type="text" placeholder="Search products..." [(ngModel)]="searchTerm" (input)="onSearch()" />
+
+  <div *ngFor="let product of products" class="card">
+    <img [src]="product.imageUrl" alt="{{ product.name }}" />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">{{ product.price | currency }}</p>
+      <button [routerLink]="['/products', product.id]" class="btn">View</button>
+      <button [routerLink]="['/edit', product.id]" class="btn">Edit</button>
+      <button (click)="deleteProduct(product.id)" class="btn">Delete</button>
+    </div>
+  </div>
+</div>

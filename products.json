@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "deck",
+      "descriptions": "8.5in Santa Cruz Skateboard Deck",
+      "price": "68.95",
+      "style": "Classic",
+      "imageUrl": "assets/decks.jpg"
+    },
+    {
+      "id": 2,
+      "name": "wheels",
+      "descriptions": "52mm with bearings/spacers installed; 4 pack",
+      "price": "15.99",
+      "style": "Skateboard Tricks",
+      "imageUrl": "assets/wheels.jpg"
+    },
+    {
+      "id": 3,
+      "name": "trucks",
+      "descriptions": "K5 DLK Krux; 2 pack",
+      "price": "51.90",
+      "style": "Polished",
+      "imageUrl": "assets/trucks.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Complete Boards",
+      "description": "New and improved coffee",
+      "price": 139.99,
+      "style": "longboards",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTp4biW-iq4e5cLuIg_hHnFAdEuNeYcFeonWJLFuFnDK50ylQcubZr9HE4la0hq5kLl6SNR1oSFGoLy95NOIBK4L3GVlLFruYeIebmFfQ09YlWUrD8lP0-W_7jVS65A-q4skx_0eTntxpU&usqp=CAc"
+    },
+    {
+      "id": 5,
+      "name": "Mateo",
+      "description": "Tasty",
+      "price": 10,
+      "style": "steel",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTp4biW-iq4e5cLuIg_hHnFAdEuNeYcFeonWJLFuFnDK50ylQcubZr9HE4la0hq5kLl6SNR1oSFGoLy95NOIBK4L3GVlLFruYeIebmFfQ09YlWUrD8lP0-W_7jVS65A-q4skx_0eTntxpU&usqp=CAc"
+    }
+  ]
+}

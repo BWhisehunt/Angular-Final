@@ -1,0 +1,26 @@
+<h1> Add New Product</h1>
+
+<form (ngSubmit)="addProduct()">
+    <div>
+        <label for="name">Item Name:</label>
+        <input id="name" [(ngModel)]="product.name" name="name">
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input id="price" [(ngModel)]="product.description" name="description">
+    </div>
+    <div>
+        <label for="price">Price:</label>
+        <input id="price" type="number" [(ngModel)]="product.price" name="price">
+  
+    </div>
+    <div>
+       <label for="imageUrl">Image URL:</label>
+    <input id="imageUrl" [(ngModel)]="product.imageUrl" name="imageUrl">
+    </div>
+    <div>
+        <label for="style">Style:</label>
+        <input id="style" [(ngModel)]="product.style" name="style">
+    </div>
+    <button type="submit">Add Product</button>
+  </form>
