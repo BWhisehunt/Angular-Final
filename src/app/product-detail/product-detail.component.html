@@ -1,9 +1,12 @@
 <div *ngIf="product" class="product-detail">
     <img [src]="product.imageUrl" alt="{{ product.name }}">
-    <h2>{{ product.name }}</h2>
+    <h3>{{ product.name }}</h3>
     <p>{{ product.description }}</p>
     <p>Price: {{ product.price | currency }}</p>
     <p>Style: {{ product.style }}</p>
+    <button [routerLink]="['/products', product]" class="btn-back">Back</button>
+    <button [routerLink]="['/edit', product.id]" class="btn-edit">Edit</button>
+    <button (click)="deleteProduct()" class="btn-delete">Delete</button>
     <div *ngIf="!product">
         <p>Product not found.</p>
   </div>

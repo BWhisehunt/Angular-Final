@@ -2,43 +2,51 @@
   "products": [
     {
       "id": 1,
-      "name": "deck",
-      "descriptions": "8.5in Santa Cruz Skateboard Deck",
+      "name": "Decks",
+      "description": "8.5in Santa Cruz Skateboard Deck",
       "price": "68.95",
       "style": "Classic",
       "imageUrl": "assets/decks.jpg"
     },
     {
       "id": 2,
-      "name": "wheels",
-      "descriptions": "52mm with bearings/spacers installed; 4 pack",
+      "name": "Wheels",
+      "description": "52mm with bearings/spacers installed; 4 pack",
       "price": "15.99",
       "style": "Skateboard Tricks",
       "imageUrl": "assets/wheels.jpg"
     },
     {
       "id": 3,
-      "name": "trucks",
-      "descriptions": "K5 DLK Krux; 2 pack",
+      "name": "Trucks",
+      "description": "K5 DLK Krux; 2 pack",
       "price": "51.90",
       "style": "Polished",
       "imageUrl": "assets/trucks.jpg"
     },
     {
       "id": 4,
-      "name": "Complete Boards",
-      "description": "New and improved coffee",
-      "price": 139.99,
-      "style": "longboards",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTp4biW-iq4e5cLuIg_hHnFAdEuNeYcFeonWJLFuFnDK50ylQcubZr9HE4la0hq5kLl6SNR1oSFGoLy95NOIBK4L3GVlLFruYeIebmFfQ09YlWUrD8lP0-W_7jVS65A-q4skx_0eTntxpU&usqp=CAc"
+      "name": "Grip Tape",
+      "description": "Black anti-slip grip tape 9\" x 33\"",
+      "price": 9.95,
+      "style": "Sticky",
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRhO-I6LSPDTIDnDHHR2IZacIwS4GRAL-yvX5i3AzLo2aV4vpxvmxzNV_yQVCiUxah9vBHo46zNvK0e1r9BjrhNlIyfh1Fv9ZvjoXP0dUeTnsrx4g_43lQF7fuITPRqKLpP21Z8dh5ZcgI&usqp=CAc"
     },
     {
       "id": 5,
-      "name": "Mateo",
-      "description": "Tasty",
-      "price": 10,
-      "style": "steel",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTp4biW-iq4e5cLuIg_hHnFAdEuNeYcFeonWJLFuFnDK50ylQcubZr9HE4la0hq5kLl6SNR1oSFGoLy95NOIBK4L3GVlLFruYeIebmFfQ09YlWUrD8lP0-W_7jVS65A-q4skx_0eTntxpU&usqp=CAc"
+      "name": "Complete Skateboard",
+      "description": "CCS Logo Complete Black Board",
+      "price": 139.99,
+      "style": "Complete Classic",
+      "imageUrl": "data:image/webp;base64,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"
+    },
+    {
+      "id": 6,
+      "name": "Skateboard Bearings",
+      "description": "Abec 9 Black",
+      "price": 8.95,
+      "style": "Carbon Steel",
+      "imageUrl": "https://cdn11.bigcommerce.com/s-ae3w3/images/stencil/500x659/products/2333/3046/ABEC9BLACKSHIELD__31493.1434644668.jpg?c=2"
     }
   ]
 }

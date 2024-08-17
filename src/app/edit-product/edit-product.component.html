@@ -1,9 +1,9 @@
-<h1> Edit Product</h1>
+<h2> Edit Product</h2>
 
 <form (ngSubmit)="onSubmit()">
     <div>
         <label for="name">Name</label>
-    <input type="name" name="name" [(ngModel)] ="product.name">
+        <input type="name" name="name" [(ngModel)] ="product.name">
     </div>
     <div>
         <label for="description">Description</label>
@@ -14,12 +14,13 @@
         <input type="number" id="price" [(ngModel)]="product.price" name="price">
     </div>
     <div>
-        <label for="style">style</label>
+        <label for="style">Style</label>
         <input type="text" id="style" [(ngModel)]="product.style" name="style">
     </div>
     <div>
-        <label for="imageUrl"></label>
-        <input type="image" id="imageUrl" [(ngModel)]="product.imageUrl">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" id="imageUrl" [(ngModel)]="product.imageUrl">
     </div>
+    <button [routerLink]="['/products', product]" class="btn-back">Back</button>
     <button type="submit">Submit</button>
   </form>

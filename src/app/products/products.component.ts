@@ -8,7 +8,10 @@ import { Product } from '../models/product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products: Product[] = [];
+  product: Product[] = [];
+  sortBy: string = 'name';
+  sortOrder: string = 'asc';
+  searchTerm: string = '';
 
   constructor(private productService: ProductService) {}
 
@@ -18,25 +21,28 @@ export class ProductsComponent implements OnInit {
 
   loadProducts(): void {
     this.productService.getProducts().subscribe((data: Product[]) => {
-      this.products = data;
+      this.product = data;
     });
   }
 
   deleteProduct(id: number): void {
     console.log('Deleting product with id:', id);
     this.productService.deleteProduct(id).subscribe(() => {
-      this.products = this.products.filter(product => product.id !== id);
+      this.product = this.product.filter(product => product.id !== id);
       console.log('Product deleted');
     }, error => {
       console.error('Delete failed', error);
     });
   }
 
-  searchTerm: string = '';
-
 onSearch() {
   this.productService.searchProducts(this.searchTerm).subscribe((products) => {
-    this.products = products;
+    this.product = products;
   });
+}
+
+sortProducts(): void {
+  this.productService.getSortedProducts(this.sortBy, this.sortOrder)
+    .subscribe(products => this.product = products);
 }
 }

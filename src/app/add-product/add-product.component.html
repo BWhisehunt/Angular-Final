@@ -1,4 +1,4 @@
-<h1> Add New Product</h1>
+<h2> Add Product</h2>
 
 <form (ngSubmit)="addProduct()">
     <div>
@@ -7,7 +7,7 @@
     </div>
     <div>
         <label for="description">Description:</label>
-        <input id="price" [(ngModel)]="product.description" name="description">
+        <input id="description" [(ngModel)]="product.description" name="description">
     </div>
     <div>
         <label for="price">Price:</label>
@@ -22,5 +22,6 @@
         <label for="style">Style:</label>
         <input id="style" [(ngModel)]="product.style" name="style">
     </div>
-    <button type="submit">Add Product</button>
+    <button [routerLink]="['/products', product]" class="btn-back">Back</button>
+    <button type="submit">Submit</button>
   </form>

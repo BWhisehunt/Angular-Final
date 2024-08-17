@@ -61,4 +61,8 @@ export class ProductService {
   searchProducts(term: string): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiUrl}?q=${term}`);
   }
+
+  getSortedProducts(sortBy: string, sortOrder: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}?_sort=${sortBy}&_order=${sortOrder}`);
+  }
 }

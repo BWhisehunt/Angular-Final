@@ -1,17 +1,35 @@
 <div class="product-list">
   <h2>Product List</h2>
-  <button routerLink="/add" class="btn btn-primary">Add New Product</button>
-  <br>
+  
+  <button routerLink="/add" class="btn-add">Add Product</button>
+  
   <input type="text" placeholder="Search products..." [(ngModel)]="searchTerm" (input)="onSearch()" />
+  
+  <div class="sort-options">
+    <label for="sortBy">Sort by:</label>
+    <select id="sortBy" [(ngModel)]="sortBy" (change)="sortProducts()">
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+    </select>
 
-  <div *ngFor="let product of products" class="card">
+    <label for="sortOrder">Order:</label>
+    <select id="sortOrder" [(ngModel)]="sortOrder" (change)="sortProducts()">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+  </div>
+
+  <div class="product-container">
+    <div *ngFor="let product of product" class="card">
     <img [src]="product.imageUrl" alt="{{ product.name }}" />
-    <div class="card-body">
-      <h5 class="card-title">{{ product.name }}</h5>
-      <p class="card-text">{{ product.price | currency }}</p>
-      <button [routerLink]="['/products', product.id]" class="btn">View</button>
-      <button [routerLink]="['/edit', product.id]" class="btn">Edit</button>
-      <button (click)="deleteProduct(product.id)" class="btn">Delete</button>
+      <div class="card-body">
+        <h3 class="card-title">{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p class="card-text">{{ product.price | currency }}</p>
+        <button [routerLink]="['/products', product.id]" class="btn-view">View</button>
+        <button [routerLink]="['/edit', product.id]" class="btn-edit">Edit</button>
+        <button (click)="deleteProduct(product.id)" class="btn-delete">Delete</button>
+      </div>
     </div>
   </div>
 </div>

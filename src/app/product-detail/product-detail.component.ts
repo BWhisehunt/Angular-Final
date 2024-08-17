@@ -22,11 +22,23 @@ export class ProductDetailComponent implements OnInit {
   }
 
   getProduct(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id')); // Convert to number
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.productService.getProduct(id)
       .subscribe({
         next: (product) => this.product = product,
         error: (err) => console.error('Product not found', err)
       });
+  }
+
+  deleteProduct(): void {
+    if (this.product) {
+      this.productService.deleteProduct(this.product.id).subscribe({
+        next: () => {
+          console.log('Product deleted');
+          this.router.navigate(['/products']);
+        },
+        error: (err) => console.error('Delete failed', err)
+      });
+    }
   }
 }
